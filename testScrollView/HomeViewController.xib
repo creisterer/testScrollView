@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wd5-59-1Ib">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKX-0A-KUy">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label with quite a bit of text to be shrunk" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gj7-Qo-hKL">
+                                    <rect key="frame" x="8" y="291" width="314" height="21"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="21" id="mOe-Fi-xZn"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="mOe-Fi-xZn"/>
+                                        </mask>
+                                    </variation>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gj7-Qo-hKL" secondAttribute="trailing" id="ZGN-us-67U"/>
+                                <constraint firstAttribute="centerY" secondItem="gj7-Qo-hKL" secondAttribute="centerY" id="ZjZ-zL-eAd"/>
+                                <constraint firstAttribute="centerX" secondItem="gj7-Qo-hKL" secondAttribute="centerX" id="cGD-SY-RJd"/>
+                                <constraint firstItem="gj7-Qo-hKL" firstAttribute="leading" secondItem="cKX-0A-KUy" secondAttribute="leadingMargin" id="v6R-NN-cB7"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="ZGN-us-67U"/>
+                                    <exclude reference="cGD-SY-RJd"/>
+                                </mask>
+                            </variation>
+                        </view>
+                        <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="760" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Qmb-CL-4gY">
+                            <rect key="frame" x="407" y="286" width="185" height="29"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="193" id="O4n-yA-NHw"/>
+                            </constraints>
+                            <segments>
+                                <segment title="First"/>
+                                <segment title="Second"/>
+                                <segment title="Third"/>
+                            </segments>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="O4n-yA-NHw"/>
+                                </mask>
+                            </variation>
+                        </segmentedControl>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="cKX-0A-KUy" secondAttribute="bottom" id="45r-KF-7IO"/>
+                        <constraint firstItem="cKX-0A-KUy" firstAttribute="centerX" secondItem="Wd5-59-1Ib" secondAttribute="centerX" id="6yT-hR-a0t"/>
+                        <constraint firstItem="cKX-0A-KUy" firstAttribute="centerY" secondItem="Wd5-59-1Ib" secondAttribute="centerY" id="HPq-u7-1k5"/>
+                        <constraint firstItem="Qmb-CL-4gY" firstAttribute="centerY" secondItem="gj7-Qo-hKL" secondAttribute="centerY" id="JyQ-w1-kAQ"/>
+                        <constraint firstItem="Qmb-CL-4gY" firstAttribute="centerY" secondItem="cKX-0A-KUy" secondAttribute="centerY" id="SpQ-hP-bs6"/>
+                        <constraint firstAttribute="trailing" secondItem="cKX-0A-KUy" secondAttribute="trailing" id="fPB-hj-94f"/>
+                        <constraint firstItem="cKX-0A-KUy" firstAttribute="leading" secondItem="Wd5-59-1Ib" secondAttribute="leading" id="gO7-sx-gNl"/>
+                        <constraint firstItem="Qmb-CL-4gY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gj7-Qo-hKL" secondAttribute="trailing" constant="4" id="jeR-LA-SMP"/>
+                        <constraint firstItem="cKX-0A-KUy" firstAttribute="top" secondItem="Wd5-59-1Ib" secondAttribute="top" id="njm-sw-AR4"/>
+                        <constraint firstItem="Qmb-CL-4gY" firstAttribute="trailing" secondItem="Wd5-59-1Ib" secondAttribute="trailingMargin" id="rhT-8B-9I6"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="constraints">
+                            <exclude reference="SpQ-hP-bs6"/>
+                        </mask>
+                    </variation>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Wd5-59-1Ib" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="IrP-kh-mHY"/>
+                <constraint firstAttribute="trailing" secondItem="Wd5-59-1Ib" secondAttribute="trailing" id="mEt-wM-HWl"/>
+                <constraint firstItem="Wd5-59-1Ib" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="oHF-A4-een"/>
+                <constraint firstAttribute="bottom" secondItem="Wd5-59-1Ib" secondAttribute="bottom" id="sci-Nd-B4F"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
